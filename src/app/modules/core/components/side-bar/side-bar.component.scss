@@ -1,3 +1,42 @@
+@import '../../../../../blade/styles/color';
+$side-bar-width: 260px;
+$side-bar-bg: #fff;
+
 :host {
   display: block;
+}
+
+.side-bar {
+  height: calc(100vh - 65px);
+  width: $side-bar-width;
+  border-right: $grey-6;
+  background-color: $side-bar-bg;
+  overflow-y: auto;
+}
+
+.side-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+
+  .menu-item {
+    margin: 0;
+    padding: 0;
+
+    &__icon {
+      margin: 24px 16px 24px 24px;
+      font-size: 18px;
+    }
+
+    &__text {
+      color: $grey-2;
+
+    }
+  }
+}
+
+.icon__red {
+  color: #EB5757;
 }
