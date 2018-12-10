@@ -1,0 +1,45 @@
+@import '../../../../../blade/styles/color';
+
+$nav-height: 64px;
+$nav-bg: #ffffff;
+
+:host {
+  display: block;
+}
+
+.top-bar {
+  height: $nav-height;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $nav-bg;
+  border-bottom: 1px solid $grey-6;
+
+  &__left {
+    padding: 0 24px;
+  }
+
+  &__center {
+
+  }
+
+  &__right {
+
+  }
+}
+
+.app-logo {
+  display: flex;
+  align-items: center;
+
+  &__icon {
+    height: 100%;
+  }
+
+  &__text {
+    margin-left: 16px; 
+    font-size: 20px;
+    color: $grey-1;
+    font-weight: 300;
+  }
+}
