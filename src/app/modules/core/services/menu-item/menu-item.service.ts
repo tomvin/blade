@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { MenuItemVM } from './menu-item.model';
+import { MenuItemVM, MenuItemCategoryVM } from './menu-item.model';
 
 @Injectable({
   providedIn: 'root'
@@ -13,40 +13,109 @@ export class MenuItemService {
    * 
    * TODO: Implement actual menu items for this application. 
    */
-  getMenuItems(): MenuItemVM[] {
+  getMenuItems(): MenuItemCategoryVM[] {
     return MOCKUP_MENU_ITEMS;
   }
 
 }
 
-const MOCKUP_MENU_ITEMS: MenuItemVM[] = [
+const MOCKUP_MENU_ITEMS: MenuItemCategoryVM[] = [
   {
-    label: 'Dashboards',
+    id: 1,
+    categoryLabel: 'Dashboards',
     fontAwesomeIconName: 'home',
-    route: '/'
+    defaultMenuItemIdToNavigateTo: 2,
+    menuItems: [
+      {
+        id: 2,
+        label: 'Layout One',
+        route: '/dashboard/one',
+        fontAwesomeIconName: 'home'
+      },
+      {
+        id: 15,
+        label: 'Layout Two',
+        route: '/dashboard/two',
+        fontAwesomeIconName: 'home'
+      }
+    ]
   },{
-    label: 'Components',
+    id: 3,
+    categoryLabel: 'Components',
     fontAwesomeIconName: 'home',
-    route: '/'
+    defaultMenuItemIdToNavigateTo: 4,
+    menuItems: [
+      {
+        id: 4,
+        label: 'Button',
+        route: '/component/button',
+        fontAwesomeIconName: 'home'
+      }
+    ]
   },{
-    label: 'Form Controls',
+    id: 5,
+    categoryLabel: 'Form Controls',
     fontAwesomeIconName: 'home',
-    route: '/'
+    defaultMenuItemIdToNavigateTo: 6,
+    menuItems: [
+      {
+        id: 6,
+        label: 'Layout One',
+        route: '/form-controls',
+        fontAwesomeIconName: 'home'
+      }
+    ]
   },{
-    label: 'Pages',
+    id: 7,
+    categoryLabel: 'Pages',
     fontAwesomeIconName: 'home',
-    route: '/'
+    defaultMenuItemIdToNavigateTo: 8,
+    menuItems: [
+      {
+        id: 8,
+        label: 'Layout One',
+        route: '/pages',
+        fontAwesomeIconName: 'home'
+      }
+    ]
   },{
-    label: 'Maps',
+    id: 9,
+    categoryLabel: 'Maps',
     fontAwesomeIconName: 'home',
-    route: '/'
+    defaultMenuItemIdToNavigateTo: 10,
+    menuItems: [
+      {
+        id: 10,
+        label: 'Layout One',
+        route: '/maps',
+        fontAwesomeIconName: 'home'
+      }
+    ]
   },{
-    label: 'Charts',
+    id: 11,
+    categoryLabel: 'Charts',
     fontAwesomeIconName: 'home',
-    route: '/'
+    defaultMenuItemIdToNavigateTo: 12,
+    menuItems: [
+      {
+        id: 12,
+        label: 'Layout One',
+        route: '/charts',
+        fontAwesomeIconName: 'home'
+      }
+    ]
   },{
-    label: 'Icons',
+    id: 13,
+    categoryLabel: 'Icons',
     fontAwesomeIconName: 'home',
-    route: '/'
+    defaultMenuItemIdToNavigateTo: 14,
+    menuItems: [
+      {
+        id: 14,
+        label: 'Layout One',
+        route: '/icons',
+        fontAwesomeIconName: 'home'
+      }
+    ]
   }
 ];

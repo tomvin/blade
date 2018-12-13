@@ -2,4 +2,8 @@
 
 .app-layout {
   background-color: $grey-7;
+
+  &__main {
+    display: flex;
+  }
 }

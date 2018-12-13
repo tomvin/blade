@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { BladeModule } from 'src/blade/blade.module';
 import { CoreModule } from './modules/core/core.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { DashboardsModule } from './modules/dashboards/dashboards.module';
+import { ComponentsModule } from './modules/components/components.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     AppRoutingModule,
     BladeModule,
     CoreModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    DashboardsModule,
+    ComponentsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
