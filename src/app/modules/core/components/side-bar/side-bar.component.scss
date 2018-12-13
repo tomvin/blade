@@ -1,4 +1,6 @@
 @import '../../../../../blade/styles/color';
+@import '../../../../../blade/styles/font';
+
 $side-bar-width: 260px;
 $side-bar-bg: #fff;
 
@@ -9,7 +11,7 @@ $side-bar-bg: #fff;
 .side-bar {
   height: calc(100vh - 65px);
   width: $side-bar-width;
-  border-right: $grey-6;
+  border-right: 1px solid $grey-6;
   background-color: $side-bar-bg;
   overflow-y: auto;
 }
@@ -24,15 +26,27 @@ $side-bar-bg: #fff;
   .menu-item {
     margin: 0;
     padding: 0;
+    display: flex;
+    transition: .1s ease all;
+
+    &__link {
+      flex-grow: 1;
+      text-decoration: none;
+    }
 
     &__icon {
-      margin: 24px 16px 24px 24px;
+      padding: 24px 16px 24px 24px;
       font-size: 18px;
+      color: $grey-4;
     }
 
     &__text {
       color: $grey-2;
+      font-size: $font-size-default;
+    }
 
+    &:hover {
+      background-color: $grey-7;
     }
   }
 }
