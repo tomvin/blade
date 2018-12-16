@@ -5,7 +5,7 @@
         <a class="menu-category__link" [routerLink]="menuCategory.menuItems[0].route">
           <i class="menu-category__icon fas fa-{{ menuCategory.fontAwesomeIconName }}"></i>
           <span class="menu-category__text">{{ menuCategory.categoryLabel }}</span>
-          <ul class="menu-category-items">
+          <ul class="menu-category-items" [style.height.px]="activeMenuItemCategoryId == menuCategory.id ? menuCategory.menuItems.length * 47 : 0">
             <li *ngFor="let menuItem of menuCategory.menuItems" class="menu-item" [class.menu-item--active]="activeMenuItemChildId == menuItem.id">
               <a class="menu-item__link" [routerLink]="menuItem.route">
                 <i class="menu-item__icon fas fa-{{ menuItem.fontAwesomeIconName }}"></i>

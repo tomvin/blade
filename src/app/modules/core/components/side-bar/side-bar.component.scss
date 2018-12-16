@@ -27,7 +27,6 @@ $side-bar-bg: #fff;
     margin: 0;
     padding: 0;
     display: flex;
-    transition: .1s ease all;
 
     &__link {
       flex-grow: 1;
@@ -35,9 +34,9 @@ $side-bar-bg: #fff;
     }
 
     &__icon {
-      padding: 24px 16px 24px 24px;
+      padding: 18px 16px 18px 24px;
       font-size: 18px;
-      color: $grey-4;
+      color: $grey-3;
     }
 
     &__text {
@@ -50,8 +49,49 @@ $side-bar-bg: #fff;
     }
 
     .menu-category-items {
-      height: 0;
+      height: 0px;
       overflow: hidden;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      transition: .2s ease-in all;
+      flex-direction: column;
+
+      .menu-item {
+        border-left: 4px solid $grey-4;
+        flex-grow: 1;
+        display: flex;
+
+        &--active {
+          border-left-color: $secondary;
+          background-color: $grey-5;
+
+          .menu-item__text {
+            font-weight: bold;
+          }
+
+          .menu-item__icon {
+            // color: $grey-3;
+          }
+        }
+      }
+
+      .menu-item__link {
+        flex-grow: 1;
+        text-decoration: none;
+      }
+  
+      .menu-item__icon {
+        padding: 16px 16px 16px 24px;
+        font-size: 15px;
+        color: $grey-3;
+      }
+  
+      .menu-item__text {
+        color: $grey-2;
+        font-size: $font-size-default;
+      }
     }
 
     &--expanded {
@@ -65,51 +105,6 @@ $side-bar-bg: #fff;
         padding-left: 20px;
         border-left: 4px solid $grey-4;
         color: $secondary;
-      }
-
-      .menu-category-items {
-        height: initial;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        transition: .1s ease all;
-        flex-direction: column;
-
-        .menu-item {
-          border-left: 4px solid $grey-4;
-          flex-grow: 1;
-          display: flex;
-
-          &--active {
-            border-left-color: $secondary;
-            background-color: $grey-5;
-
-            .menu-item__text {
-              font-weight: bold;
-            }
-
-            .menu-item__icon {
-              color: $grey-3;
-            }
-          }
-        }
-
-        .menu-item__link {
-          flex-grow: 1;
-          text-decoration: none;
-        }
-    
-        .menu-item__icon {
-          padding: 16px 16px 16px 24px;
-          font-size: 18px;
-          color: $grey-4;
-        }
-    
-        .menu-item__text {
-          color: $grey-2;
-          font-size: $font-size-default;
-        }
       }
     }
   }

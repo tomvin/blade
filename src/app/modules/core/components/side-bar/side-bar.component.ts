@@ -36,18 +36,15 @@ export class SideBarComponent implements OnInit {
    * per route navigation. 
    */
   private updateActiveMenuItemCategoryId(): void {
-    const menuItemWithActiveRoute: MenuItemCategoryVM[] = this.menuCategories.filter(category => 
-      category.menuItems.find(menuItem => {
-        if (menuItem.route == this._router.url) {
+    this.menuCategories.forEach(category => {
+      category.menuItems.forEach(menuItem => {
+        if (menuItem.route === this._router.url) {
+          this.activeMenuItemCategoryId = category.id;
           this.activeMenuItemChildId = menuItem.id;
-          return true;
+          return;
         }
-      })
-    );
-
-    if (menuItemWithActiveRoute.length > 0) {
-      this.activeMenuItemCategoryId = menuItemWithActiveRoute[0].id;
-    }
+      });
+    });
   }
 
 }
