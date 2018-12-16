@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuItemService } from '../../services/menu-item/menu-item.service';
-import { MenuItemCategoryVM, MenuItemVM } from '../../services/menu-item/menu-item.model';
-import { Router, NavigationStart, NavigationEnd } from '@angular/router';
+import { MenuItemCategoryVM } from '../../services/menu-item/menu-item.model';
+import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
 
 @Component({
