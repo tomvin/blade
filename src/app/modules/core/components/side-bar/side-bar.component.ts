@@ -13,6 +13,7 @@ export class SideBarComponent implements OnInit {
   menuCategories: MenuItemCategoryVM[] = [];
   activeMenuItemCategoryId: number = 0;
   activeMenuItemChildId: number = 0;
+  readonly MENU_ITEM_HEIGHT_PX: number = 47;  // Used to determine how high to expand the active menu category. Height of a single sub menu item. 
 
   constructor(
     private _menuItemService: MenuItemService,
