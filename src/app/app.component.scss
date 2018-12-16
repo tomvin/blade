@@ -7,3 +7,8 @@
     display: flex;
   }
 }
+
+.page-container {
+  flex-grow: 1;
+  overflow-y: scroll;
+}

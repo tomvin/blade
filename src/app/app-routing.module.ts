@@ -11,6 +11,11 @@ const routes: Routes = [
     redirectTo: 'dashboard/one'
   },
   {
+    path: 'dashboard',
+    pathMatch: 'full',
+    redirectTo: 'dashboard/one'
+  },
+  {
     path: 'dashboard/one',
     pathMatch: 'full',
     component: DashboardOnePageComponent
@@ -19,6 +24,11 @@ const routes: Routes = [
     path: 'dashboard/two',
     pathMatch: 'full',
     component: DashboardTwoPageComponent
+  },
+  {
+    path: 'component',
+    pathMatch: 'full',
+    redirectTo: 'component/button'
   },
   {
     path: 'component/button',

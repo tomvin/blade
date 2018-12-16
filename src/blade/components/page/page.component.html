@@ -1,0 +1,12 @@
+<div *ngIf="pageTitle" class="page-header slide-in-right">
+  <div class="page-header__left">
+    <i *ngIf="fontAwesomeIconName" class="page-icon fas fa-{{ fontAwesomeIconName }}"></i>
+    <span class="page-title">{{ pageTitle }}</span>
+  </div>
+  <div class="page-header__right">
+
+  </div>
+</div>
+<div class="page-content slide-in-bottom" [class.page-content--padding]="padPage">
+  <ng-content></ng-content>
+</div>
