@@ -11,6 +11,11 @@ const routes: Routes = [
     redirectTo: 'dashboard/one'
   },
   {
+    path: 'dashboard',
+    pathMatch: 'full',
+    redirectTo: 'dashboard/one'
+  },
+  {
     path: 'dashboard/one',
     pathMatch: 'full',
     component: DashboardOnePageComponent
