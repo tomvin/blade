@@ -2,9 +2,11 @@
   <div class="side-menu-container">
     <ul class="side-menu">
       <li class="menu-category" *ngFor="let menuCategory of menuCategories" [class.menu-category--expanded]="activeMenuItemCategoryId == menuCategory.id">
-        <a class="menu-category__link" [routerLink]="menuCategory.menuItems[0].route">
-          <i class="menu-category__icon fas fa-{{ menuCategory.fontAwesomeIconName }}"></i>
-          <span class="menu-category__text">{{ menuCategory.categoryLabel }}</span>
+        <div class="menu-category__link">
+          <a [routerLink]="menuCategory.menuItems[0].route">
+            <i class="menu-category__icon fas fa-{{ menuCategory.fontAwesomeIconName }}"></i>
+            <span class="menu-category__text">{{ menuCategory.categoryLabel }}</span>
+          </a>
           <ul class="menu-category-items" [style.height.px]="activeMenuItemCategoryId == menuCategory.id ? menuCategory.menuItems.length * MENU_ITEM_HEIGHT_PX : 0">
             <li *ngFor="let menuItem of menuCategory.menuItems" class="menu-item" [class.menu-item--active]="activeMenuItemChildId == menuItem.id">
               <a class="menu-item__link" [routerLink]="menuItem.route">
@@ -13,7 +15,7 @@
               </a>
             </li>
           </ul>
-        </a>
+        </div>
       </li>
     </ul>
   </div>

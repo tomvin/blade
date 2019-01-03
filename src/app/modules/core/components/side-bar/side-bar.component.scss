@@ -31,6 +31,12 @@ $side-bar-bg: #fff;
     &__link {
       flex-grow: 1;
       text-decoration: none;
+
+      a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+      }
     }
 
     &__icon {
